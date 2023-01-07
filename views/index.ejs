@@ -7,61 +7,20 @@
     <title><%= title %></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/styles.css" />
-    <!-- <script>
-      var token = document
-        .querySelector('meta[name="csrf-token"]')
-        .getAttribute("content");
-      function updateTodo(id, completionStatus) {
-        fetch(`/todos/${id}`, {
-          method: "put",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            completed: completionStatus,
-            _csrf: token,
-          }),
-        })
-          .then((res) => {
-            window.location.reload(true);
-          })
-          .catch((err) => console.error(err));
-      }
-      function deleteTodo(id) {
-        console.log(id);
-        fetch(`/todos/${id}`, {
-          method: "delete",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            _csrf: token,
-          }),
-        })
-          .then((res) => {
-            window.location.reload();
-          })
-          .catch((err) => console.error(err));
-      }
-    </script> -->
   </head>
 
   <body>
     <div class="grid grid-cols-6">
       <div class="col-start-3 col-span-2">
         <%- include('header.ejs') %>
-        <p class="py-2">Welcome to the TO-DO Mananger</p>
-        <P class="py-2"ew here? <a href="/signup" class="text-green-600" >Sign-up now</a></P>
-        <P class="py-2"> Already have an account? <a href="/login" class="text-green-600">Sign-in </a></P>
-      </div>
-          </div>
-        </form>
-        <!-- <div>
-          <%- include('todo.ejs', {title: "Overdue" , data: overdue}) %> <%-
-          include('todo.ejs', {title: "Due Today" , data: dueToday}) %> <%-
-          include('todo.ejs', {title: "Due Later" , data: dueLater}) %> <%-
-          include('todo.ejs', {title: "Completed items" , data: completed}) %>
-        </div> -->
+        <p class="py-2">Welcome to the TO-DO manager</p>
+        <p class="py-2">
+          New here? <a href="/signup" class="text-green-600">Sign-up now</a>
+        </p>
+        <p class="py-2">
+          Already have an account?
+          <a href="/login" class="text-green-600">Sign-in</a>
+        </p>
       </div>
     </div>
   </body>
