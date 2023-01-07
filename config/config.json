@@ -14,10 +14,7 @@
     "dialect": "postgres"
   },
  "production": {
-   "username": "postgres",
-    "password": "harmlesstevez#100",
-    "database": "wd-todo-prod",
-    "host": "127.0.0.1",
+    "use_env_variable": "DATABASE_URL",
     "dialect": "postgres"
   }
 }
